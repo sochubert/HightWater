@@ -32,6 +32,37 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         self.locationManager.startUpdatingLocation()
         
+        setupUI()
+    }
+    
+    private func setupUI() {
+        
+        let addFloodButton = UIButton(frame: CGRect.zero)
+        addFloodButton.setImage(UIImage(named: "plus-image"), for: .normal)
+        
+        addFloodButton.addTarget(self, action: #selector(addFloodAnnotationButtonPressed), for: .touchUpInside)
+        addFloodButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(addFloodButton)
+        
+        addFloodButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        addFloodButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -40).isActive = true
+        addFloodButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        addFloodButton.heightAnchor.constraint(equalToConstant: 75).isActive = true
+    }
+    
+    @objc func addFloodAnnotationButtonPressed(sender :Any?) {
+        print("addFloodAnnotationButtonPressed")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // Zooming
+        if let location = locations.first {
+            let coordinate = location.coordinate
+            let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+            let region = MKCoordinateRegion(center: coordinate, span: span)
+            self.mapView.setRegion(region, animated: true)
+        }
     }
     
 

@@ -13,6 +13,7 @@
 		530EF92F273426CA006974ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530EF92D273426CA006974ED /* Main.storyboard */; };
 		530EF931273426CB006974ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530EF930273426CB006974ED /* Assets.xcassets */; };
 		530EF934273426CB006974ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530EF932273426CB006974ED /* LaunchScreen.storyboard */; };
+		530EF93C27343816006974ED /* plus-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 530EF93B27343816006974ED /* plus-image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		530EF930273426CB006974ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		530EF933273426CB006974ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		530EF935273426CB006974ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		530EF93B27343816006974ED /* plus-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-image.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				530EF930273426CB006974ED /* Assets.xcassets */,
 				530EF932273426CB006974ED /* LaunchScreen.storyboard */,
 				530EF935273426CB006974ED /* Info.plist */,
+				530EF93B27343816006974ED /* plus-image.png */,
 			);
 			path = HighWaters;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530EF934273426CB006974ED /* LaunchScreen.storyboard in Resources */,
+				530EF93C27343816006974ED /* plus-image.png in Resources */,
 				530EF931273426CB006974ED /* Assets.xcassets in Resources */,
 				530EF92F273426CA006974ED /* Main.storyboard in Resources */,
 			);
