@@ -14,9 +14,14 @@
 		530EF931273426CB006974ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530EF930273426CB006974ED /* Assets.xcassets */; };
 		530EF934273426CB006974ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530EF932273426CB006974ED /* LaunchScreen.storyboard */; };
 		530EF93C27343816006974ED /* plus-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 530EF93B27343816006974ED /* plus-image.png */; };
+		53EBCD1E2738190200227268 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53EBCD1D2738190200227268 /* GoogleService-Info.plist */; };
+		53EBCD2027381AA900227268 /* Flood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EBCD1F27381AA900227268 /* Flood.swift */; };
+		6951019462EC40BD808DE8B6 /* Pods_HighWaters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D12EBC6F5EE7C38C9F3D6F1 /* Pods_HighWaters.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D12EBC6F5EE7C38C9F3D6F1 /* Pods_HighWaters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWaters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A15E4B0CDDF96F357D4355 /* Pods-HighWaters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWaters.debug.xcconfig"; path = "Target Support Files/Pods-HighWaters/Pods-HighWaters.debug.xcconfig"; sourceTree = "<group>"; };
 		530EF924273426CA006974ED /* HighWaters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighWaters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		530EF927273426CA006974ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		530EF929273426CA006974ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		530EF933273426CB006974ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		530EF935273426CB006974ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		530EF93B27343816006974ED /* plus-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-image.png"; sourceTree = "<group>"; };
+		53EBCD1D2738190200227268 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		53EBCD1F27381AA900227268 /* Flood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flood.swift; sourceTree = "<group>"; };
+		72BAE392F84A7FD992373A16 /* Pods-HighWaters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWaters.release.xcconfig"; path = "Target Support Files/Pods-HighWaters/Pods-HighWaters.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6951019462EC40BD808DE8B6 /* Pods_HighWaters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09EF43F7C5A91B13833201BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D12EBC6F5EE7C38C9F3D6F1 /* Pods_HighWaters.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		530EF91B273426CA006974ED = {
 			isa = PBXGroup;
 			children = (
 				530EF926273426CA006974ED /* HighWaters */,
 				530EF925273426CA006974ED /* Products */,
+				A136C931AEC507D8F7D6A36A /* Pods */,
+				09EF43F7C5A91B13833201BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,15 +78,26 @@
 			isa = PBXGroup;
 			children = (
 				530EF927273426CA006974ED /* AppDelegate.swift */,
+				53EBCD1F27381AA900227268 /* Flood.swift */,
 				530EF929273426CA006974ED /* SceneDelegate.swift */,
 				530EF92B273426CA006974ED /* ViewController.swift */,
 				530EF92D273426CA006974ED /* Main.storyboard */,
+				53EBCD1D2738190200227268 /* GoogleService-Info.plist */,
 				530EF930273426CB006974ED /* Assets.xcassets */,
 				530EF932273426CB006974ED /* LaunchScreen.storyboard */,
 				530EF935273426CB006974ED /* Info.plist */,
 				530EF93B27343816006974ED /* plus-image.png */,
 			);
 			path = HighWaters;
+			sourceTree = "<group>";
+		};
+		A136C931AEC507D8F7D6A36A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47A15E4B0CDDF96F357D4355 /* Pods-HighWaters.debug.xcconfig */,
+				72BAE392F84A7FD992373A16 /* Pods-HighWaters.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 530EF938273426CB006974ED /* Build configuration list for PBXNativeTarget "HighWaters" */;
 			buildPhases = (
+				BF396C16ADB9683C1AF0DFA6 /* [CP] Check Pods Manifest.lock */,
 				530EF920273426CA006974ED /* Sources */,
 				530EF921273426CA006974ED /* Frameworks */,
 				530EF922273426CA006974ED /* Resources */,
+				4848B62ED47A65D6B0BC8D59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +162,55 @@
 			files = (
 				530EF934273426CB006974ED /* LaunchScreen.storyboard in Resources */,
 				530EF93C27343816006974ED /* plus-image.png in Resources */,
+				53EBCD1E2738190200227268 /* GoogleService-Info.plist in Resources */,
 				530EF931273426CB006974ED /* Assets.xcassets in Resources */,
 				530EF92F273426CA006974ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4848B62ED47A65D6B0BC8D59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWaters/Pods-HighWaters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWaters/Pods-HighWaters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighWaters/Pods-HighWaters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF396C16ADB9683C1AF0DFA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighWaters-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		530EF920273426CA006974ED /* Sources */ = {
@@ -144,6 +219,7 @@
 			files = (
 				530EF92C273426CA006974ED /* ViewController.swift in Sources */,
 				530EF928273426CA006974ED /* AppDelegate.swift in Sources */,
+				53EBCD2027381AA900227268 /* Flood.swift in Sources */,
 				530EF92A273426CA006974ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +364,7 @@
 		};
 		530EF939273426CB006974ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A15E4B0CDDF96F357D4355 /* Pods-HighWaters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -316,6 +393,7 @@
 		};
 		530EF93A273426CB006974ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72BAE392F84A7FD992373A16 /* Pods-HighWaters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
