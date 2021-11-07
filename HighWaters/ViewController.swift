@@ -16,8 +16,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     
     private var rootRef: DatabaseReference!
-
-    
     private var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
@@ -41,7 +39,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         self.locationManager.startUpdatingLocation()
         
         setupUI()
+        
+        populateFloodedRegions()
     }
+
+    // Data 불러오기
+    private func populateFloodedRegions() {
+        let floodedRegionsRef = self.rootRef.child("flooded-regions")
+        
+        floodedRegionsRef.observe(.value) { snapshot in
+            let floodedDictionaries = snapshot.value as? [String: Any] ?? [:]
+            for (key, _) in floodedDictionaries {
+                if let floodDict = floodedDictionaries[key] as? [String: Any] {
+                    DispatchQueue.main.async {
+                        let floodAnnotation = MKPointAnnotation()
+                        floodAnnotation.coordinate = CLLocationCoordinate2D(latitude: floodDict["latitude"] as! CLLocationDegrees, longitude: floodDict["longitude"] as! CLLocationDegrees)
+                
+                        self.mapView.addAnnotation(floodAnnotation)
+                    }
+                }
+            }
+        }
+    }
+    
     
     private func setupUI() {
         
@@ -70,7 +90,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             // Child Reference
             let floodedRegionRef = self.rootRef.child("flooded-regions")
-            let floodRef = floodedRegionRef.child("flood")
+            
+            let floodRef = floodedRegionRef.childByAutoId()
+            
             floodRef.setValue(flood.toDictionary())
             
         }
