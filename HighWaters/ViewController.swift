@@ -48,6 +48,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let floodedRegionsRef = self.rootRef.child("flooded-regions")
         
         floodedRegionsRef.observe(.value) { snapshot in
+            
             let floodedDictionaries = snapshot.value as? [String: Any] ?? [:]
             for (key, _) in floodedDictionaries {
                 if let floodDict = floodedDictionaries[key] as? [String: Any] {
